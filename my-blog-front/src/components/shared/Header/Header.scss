@@ -1,0 +1,22 @@
+.wrapper-header{
+  cursor: all-scroll;
+  margin-bottom: 20px;
+  h1{
+      text-align: center;
+      cursor: pointer;
+      span{
+        color: #000;
+      }
+      span:hover {
+        color: gray;
+      }
+  }
+  
+  hr {
+    width: 10%;
+    margin: 0 auto;
+    color: black;
+    background: black;
+    height: 1.5px;
+  }
+}

@@ -1,0 +1,199 @@
+.wrapper-carousel-3D{
+  width: 100%;  
+  margin-top: 100px;
+  .wrapperCarousel {
+    position: relative;
+    perspective: 1500px;
+    margin: auto;
+    width: 400px;
+    height: 200px;
+    margin-top: 50px;
+
+    @media screen and (max-width: 765px) {
+        overflow: hidden;
+        margin: 50px auto;
+        perspective: none;
+        width: 100%;
+        height: 450px;
+        margin: 50px 0px 0px;
+    }
+  
+    .carousel {
+        height: 100%;
+        width: 100%;
+        transform-style: preserve-3d; //Indicates that the children of the element should be positioned in the 3D-space.
+
+
+        @media screen and (max-width: 765px) {
+          padding: 0;
+          margin: 0;
+          width: 100%;
+          height: 350px;
+          white-space: nowrap;
+          transition: all 0.5s ease-in-out;
+          transform-style: unset;
+      }
+
+        div.carousel_cell {
+            position: absolute;
+            width: 85%;
+            height: 265px;
+            left: 10px;
+            top: 25px;
+            display: flex;
+            justify-content: center;
+            padding: 25px;
+            font-size: 25px;
+            color: #000000;
+            background-repeat: no-repeat;
+            background-size: cover;
+            -webkit-filter: brightness(70%);
+            -webkit-transition: all 1s ease;
+            -moz-transition: all 1s ease;
+            -o-transition: all 1s ease;
+            -ms-transition: all 1s ease;
+            transition: all 1s ease;
+
+            @media screen and (max-width: 765px) {
+              display: inline-block;
+              width: 100%;
+              height: 100%;
+              vertical-align: top; // Stretch all li upwards, so that there will be no margin
+              white-space: normal;
+              background-repeat: no-repeat;
+              background-position: center;
+              background-size: cover;
+              cursor: pointer;
+              text-align: center;
+              padding: 25px;
+              font-size: 25px;
+              color: #000000;
+              position: initial;
+          }
+
+            p:after { //button border title box
+                display:block;
+                content: '';
+                border-bottom: solid 3px black;  
+                transform: scaleX(0);  
+                transition: transform 250ms ;
+            }
+
+            p:hover:after { 
+                transform: scaleX(1); 
+            }      
+        }
+
+        .carousel_cell:hover {
+            cursor: pointer;
+            -webkit-filter: brightness(100%);
+        }
+
+        .carousel_cell:nth-child(1) {
+            transform: rotateY(0deg) translateZ(350px);
+        }
+
+        .carousel_cell:nth-child(2) {
+        transform: rotateY(60deg) translateZ(350px);
+        }
+
+        .carousel_cell:nth-child(3) {
+            transform: rotateY(120deg) translateZ(350px);
+        }
+
+        .carousel_cell:nth-child(4) {
+            transform: rotateY(180deg) translateZ(350px);
+          }
+
+          .carousel_cell:nth-child(5) {
+            transform: rotateY(240deg) translateZ(350px);
+          }
+
+          .carousel_cell:nth-child(6) {
+            transform: rotateY(300deg) translateZ(350px);
+          }
+    }
+    .bloc_button_mobile{
+      display: none;
+    }
+
+    .pagination_points{
+      gap: 5px;
+      align-items: center;
+      justify-content: center;
+      height: 80px;
+      display: none;
+        .pagination_point{
+          width: 12px;
+          height: 12px;
+          background-color: gray;
+          border-radius: 50%;
+          &.active {
+            background-color: #000000;
+            opacity: 0.2; 
+          }
+        }
+      
+    }
+  }
+}
+  .bloc_button {
+      display: flex;
+      justify-content: center;
+      margin-top: 200px;
+      gap: 300px;
+      
+      button {
+        cursor: pointer;
+        box-shadow: 1px 1px 2px grey;
+      }
+
+      .btn:link,
+      .btn:visited {
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 15px 40px;
+        display: inline-block;
+        border-radius: 100px;
+        transition: all .2s;
+        position: absolute;
+      }
+
+    .btn:hover {
+        transform: translateY(-3px);
+        opacity: 5px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+    .btn:active {
+      transform: translateY(-1px);
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    }
+  }
+ 
+@media screen and (max-width: 765px) {
+  .wrapper-carousel-3D{
+    .wrapperCarousel {
+      .carousel {
+        transform: translateZ(0) rotateY(0) !important;
+        .carousel_cell:nth-child(1),
+        .carousel_cell:nth-child(2),
+        .carousel_cell:nth-child(3),
+        .carousel_cell:nth-child(4),
+        .carousel_cell:nth-child(5),
+        .carousel_cell:nth-child(6)
+        {
+          transform: translateZ(0) rotateY(0);   
+        }
+      }
+      .pagination_points{
+        display: flex;
+      }
+      .bloc_button_mobile{
+        display: block;
+      }
+    }
+    .bloc_button{
+      display: none;
+    }
+  }
+}

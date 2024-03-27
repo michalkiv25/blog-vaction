@@ -1,0 +1,203 @@
+.description-country{
+  .hr{
+      border-top: 2px solid  #ebedec;
+      width: 50%;
+      margin: 0 auto;
+  }
+  .container-page{
+      text-align: center;
+      min-height: 1000px;
+      .wrapper-header{
+          display: flex;
+          border: 2px solid #DCDCDC;
+          border: 1mm ridge #FFFFF0;
+          h3 {
+              text-align: center;
+              font-size: 40px;
+              align-self: center;
+              padding-right: 15px;
+
+          }
+      }
+      .tabs, .tabs-slice{
+          // position: relative;
+          margin-top: 70px;
+          font-size: 20px;
+          ul{
+              display: flex;
+              justify-content: center;
+              padding: 0px 32px;
+              li {
+                  // width: 135px;
+                  text-align: center;
+                  background: #e9ecf1;
+                  border-right: 1px solid #c1c4c9;
+                  padding: 13px 15px;
+                  cursor: pointer;
+                  background-size: cover;
+
+                  &.active {
+                      text-shadow: 2px 2px 2px gray;
+                      font-weight: bold;
+                  }
+              }
+              
+              li:first-child{
+                  border-right: none;
+              }
+
+              li:hover {
+                  opacity: 0.5;
+              }
+      
+          }
+      }
+      .tabs-slice{
+      }
+     
+      .warpper-content{
+          margin: 80px 19%;
+          min-height: 600px;
+          .content {
+              font-size: 18px;
+              color: black;
+              padding: 0px;
+              &.none-display{
+                  display: none !important;
+              }
+              &.list-image-video{
+                  display: flex;
+                  flex-wrap: wrap;
+                  justify-content: center;
+                  width: 100%;
+                  min-height: 500px;
+                  gap: 15px;
+                  li {
+                      cursor: pointer;
+                      div{
+                          figure{
+                              margin: 0px;
+                              img {
+                                  border: 1px gainsboro solid;
+                                  box-shadow: 1px 2px 4px grey;
+                                  transition: transform 0.3s;
+                                  width: 250px;
+                                  height: 166px;
+                                  cursor: pointer;
+                              }
+                              img:hover{
+                                  transform: scale(1.1);
+                              }
+                          }
+                      }
+                  }
+              }
+          }
+
+          .story-our-trip{
+              // background: #222;
+              color: black;
+              font-family: system-ui;
+              // overflow: hidden; 
+              padding: 0px 30px;         
+          }
+
+          .list-hotels{
+              display: flex;
+              width: 100%;
+              min-height: 385px;
+              padding: 0% 2%;
+              justify-content: center;
+              flex-wrap: wrap;
+              .box{
+                  overflow: hidden;
+                  transition: .6s;
+                  margin: 0 10px;
+                  cursor: pointer;
+                  min-width: 250px;
+                  max-width: 350px;
+
+              }
+
+              .box > div {
+                  width: 200%;
+                  height: calc(100% - 50px);
+                  object-fit: cover; 
+                  transition: .5s;
+
+                  background-position: center;
+                  background-size: cover;
+                  border: 1px gainsboro solid;
+                  box-shadow: 1px 2px 4px grey;
+
+              }
+              .box > h3 {
+                  font-size: 20px;
+                  display: block;
+                  text-align: center;
+                  height: 50px;
+                  line-height: 2.6;
+              }
+
+              .box:hover { flex: 1 1 100%; }
+              .box:hover > div {
+                  width: 100%;
+                  height: 100%;
+              }
+          }
+      }
+  };
+
+  @media screen and (max-width: 1200px) {
+      .container-page{
+          .warpper-content{
+              margin: 80px 5%;
+          }
+      }    
+  };
+
+  @media screen and (max-width: 760px) {
+      .container-page{
+          .warpper-content{
+              .list-hotels{
+                  max-height: 100vh;
+                  min-height: 300px;
+                  .box{
+                      margin-bottom: 10px;
+                      height: 250px;
+                  }
+              }
+          }
+      }
+  };
+
+  @media screen and (max-width: 550px) {
+      .container-page{
+          .activeLi {
+              border-radius: 20px;
+              border: 1px solid lightgray;
+          }
+          .tabs, .tabs-slice{
+              // position: relative;
+              ul{
+                  flex-direction: column;
+                  border: 1px solid #C0C0C0;
+                  padding: 5px;
+                  box-shadow: 0px 5px 5px gray;
+                  &.tabs-areas-mobile{
+                      align-items: center;
+
+                  }
+                  li {
+                      border-right: unset;
+                      // border-bottom: 0.5px dashed  grey;
+                      // width: 75px;
+                      &.active {
+                          @extend .activeLi;
+                      }
+                  }
+              }
+          }
+      }
+  };
+}

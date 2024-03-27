@@ -1,0 +1,55 @@
+body {
+  overflow-x: hidden;
+  background-color: white;
+  color: black;
+}
+
+hr {
+  box-sizing: content-box; /* 1 */
+}
+
+#root {
+  background-color: white;
+}
+
+sub {
+  bottom: -0.25em;
+}
+sup {
+  top: -0.5em;
+}
+
+button,
+select { /* 1 */
+  text-transform: none;
+}
+
+pre code {
+    font-size: inherit;
+    color: inherit;
+    word-break: normal;
+}
+
+@media print {
+  body {
+    background-color: #bcb8b1;
+  }
+}
+body::backdrop {
+  background-color: #bcb8b1;
+}
+img {
+  height: 100%;
+  width: auto;
+}
+img,
+fieldset {
+  border: 0;
+}
+a {
+  color: blue;
+  text-decoration: none;
+}
+blockquote, dd, dl, figure, h1, h2, h3, h4, h5, h6, hr, p, pre {
+  margin: 0;
+}

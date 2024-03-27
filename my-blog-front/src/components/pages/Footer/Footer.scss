@@ -1,0 +1,211 @@
+footer {
+  position: relative;
+  background: #DCDCDC;
+  min-height: 100px;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 80px;
+  font-size: 1rem;
+  font-weight: 300;
+
+  // .wave {
+  //     position: absolute;
+  //     top: -100px;
+  //     left: 0;
+  //     width: 100%;
+  //     height: 100px;
+  //     background: url("https://i.imgur.com/ZAts69f.png");
+  //     background-size: 1000px 100px;
+  //   }
+
+  //   .wave1 {
+  //     z-index: 1000;
+  //     opacity: 1;
+  //     bottom: 0;
+  //     animation: animateWaves 4s linear infinite;
+  //   }
+
+  //   .wave2 {
+  //     z-index: 999;
+  //     opacity: 0.5;
+  //     bottom: 10px;
+  //     animation: animate 4s linear infinite !important;
+  //     // background-color: #d6249f;
+  //   }
+
+  //   .wave3 {
+  //     z-index: 1000;
+  //     opacity: 0.2;
+  //     bottom: 15px;
+  //     animation: animateWaves 3s linear infinite;
+  //   }
+    
+  //   .wave4 {
+  //     z-index: 999;
+  //     opacity: 0.1;
+  //     bottom: 20px;
+  //     animation: animate 3s linear infinite;
+  //   }
+
+    
+  // @keyframes animateWaves {
+  //     0% {
+  //       background-position-x: 1000px;
+  //     }
+  //     100% {
+  //       background-positon-x: 0px;
+  //     }
+  // }
+
+  //   @keyframes animate {
+  //     0% {
+  //       background-position-x: -1000px;
+  //     }
+  //     100% {
+  //       background-positon-x: 0px;
+  //     }
+  // }
+
+    .wrapper-menu {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom:40px ;
+      flex-wrap: wrap;
+
+      a{
+        .icon{
+          position: relative;
+          background: aliceblue;
+          color: rgb(0, 0, 15);
+          border-radius: 50%;
+          margin: 10px;
+          width: 50px;
+          height: 50px;
+          font-size: 18px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+          cursor: pointer;
+          transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+          
+          .tooltip{
+            position: absolute;
+            top: 0;
+            font-size: 14px;
+            background: aliceblue;
+            color: aliceblue;
+            font-family: "Poppins", sans-serif;
+            padding: 5px 8px;
+            border-radius: 5px;
+            box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            pointer-events: none;
+            transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+          }
+          .tooltip::before {
+            position: absolute;
+            content: "";
+            height: 8px;
+            width: 8px;
+            background: aliceblue;
+            top: -3px;
+            left: 50%;
+            transform: translate(-50%) rotate(45deg);
+            transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+          }
+        }
+        .icon:hover {
+          .tooltip {
+            top: 60px;
+            opacity: 1;
+            visibility: visible;
+            pointer-events: auto;
+            text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+          }  
+          span{
+            text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+          }
+        }
+
+        .facebook:hover {
+          .tooltip::before {
+            background: #4267b2;
+            color: aliceblue;
+          }
+        }
+
+        .facebook:hover {
+          .tooltip {
+            background: #4267b2;
+            color: aliceblue;
+          }
+        }
+
+        .facebook:hover {
+          background: #4267b2;
+          color: aliceblue;
+        }
+
+        .instagram:hover {
+          background: radial-gradient(
+            circle at 30% 107%,
+            #fdf497 0%,
+            #fdf497 5%,
+            #fd5949 45%,
+            #d6249f 60%,
+            #285aeb 90%
+          );
+          color: aliceblue;
+        }
+
+
+          .instagram:hover{
+          .tooltip{
+            background: radial-gradient(
+              circle at 30% 107%,
+              #fdf497 0%,
+              #fdf497 5%,
+              #fd5949 45%,
+              #d6249f 60%,
+              #285aeb 90%
+            );
+            color: aliceblue;
+          }
+          }
+
+        .instagram:hover{
+          .tooltip::before {
+            background: radial-gradient(
+              circle at 30% 107%,
+              #fdf497 0%,
+              #fdf497 5%,
+              #fd5949 45%,
+              #d6249f 60%,
+              #285aeb 90%
+            );
+            color: aliceblue;
+          }
+        } 
+      }
+    }
+
+    p{
+      white-space: nowrap;
+    }
+}
+
+// @media screen and (max-width: 860px) {
+//   footer {
+//     margin: 0;
+//     .wave {
+//       position: fixed;
+//     }
+//   }
+// }
